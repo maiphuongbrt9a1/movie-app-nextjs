@@ -15,7 +15,7 @@ export default function Header() {
   const pathname = usePathname()
 
   return (
-    <header className="fixed top-0 py-4 w-full bg-linear-to-b from-black-08 to-black/10">
+    <header className="fixed top-0 py-4 w-full bg-linear-to-b from-black-08 to-black/10 z-40">
       <div className="container flex items-center justify-between relative">
         {/* Logo */}
         <Link href={'/'}>
