@@ -12,8 +12,8 @@ import Slider from '@/components/Slider'
 
 export default function Categories() {
   return (
-    <section className="">
-      <div className="container">
+    <section className="section">
+      <div className="container space-y-10 lg:space-y-16">
         {/* Title */}
         <Title
           title="Explore our wide variety of categories"
@@ -21,7 +21,7 @@ export default function Categories() {
         />
         {/* Wrapper */}
         <div className="">
-          <Carousel className="w-full max-w-[12rem] sm:max-w-xs md:max-w-sm">
+          <Carousel className="w-full max-lg:overflow-x-hidden ">
             <CarouselContent className="-ml-1">
               {categoryItems.map((item) => (
                 <Slider key={item.id} {...item} />
