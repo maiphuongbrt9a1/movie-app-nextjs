@@ -5,35 +5,29 @@ import {
   AccordionTrigger,
 } from '@/components/ui/accordion'
 
+import { faqListItems } from '@/data/data'
+
 export default function AccordionSec() {
   return (
     <Accordion
       type="single"
       collapsible
-      defaultValue={'shipping'}
-      className="max-w-lg"
+      defaultValue={'What is StreamVibe?'}
+      className="w-full grid md:grid-cols-2 gap-5 md:space-x-10"
     >
-      <AccordionItem value="shipping">
-        <AccordionTrigger>What are your shipping options?</AccordionTrigger>
-        <AccordionContent>
-          We offer standard (5-7 days), express (2-3 days), and overnight
-          shipping. Free shipping on international orders.
-        </AccordionContent>
-      </AccordionItem>
-      <AccordionItem value="returns">
-        <AccordionTrigger>What is your return policy?</AccordionTrigger>
-        <AccordionContent>
-          Returns accepted within 30 days. Items must be unused and in original
-          packaging. Refunds processed within 5-7 business days.
-        </AccordionContent>
-      </AccordionItem>
-      <AccordionItem value="support">
-        <AccordionTrigger>How can I contact customer support?</AccordionTrigger>
-        <AccordionContent>
-          Reach us via email, live chat, or phone. We respond within 24 hours
-          during business days.
-        </AccordionContent>
-      </AccordionItem>
+      {faqListItems.map((item) => (
+        <AccordionItem key={item.id} value={item.title}>
+          <AccordionTrigger>
+            <div className="flex items-center gap-4">
+              <span className="size-12 shrink-0 bg-black-12 flex items-center justify-center ring ring-black-15 rounded-lg font-semibold">
+                {item.id}
+              </span>
+              <p className="">{item.title}</p>
+            </div>
+          </AccordionTrigger>
+          <AccordionContent>{item.text}</AccordionContent>
+        </AccordionItem>
+      ))}
     </Accordion>
   )
 }
