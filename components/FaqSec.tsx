@@ -16,7 +16,7 @@ export default function FaqSec() {
           <AccordionSec />
         </div>
         {/* Button */}
-        <Button className="mt-16 lg:mt-20 " size={'lg'}>
+        <Button className="mt-16 lg:mt-20" size={'lg'}>
           Ask a Question
         </Button>
       </div>

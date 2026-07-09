@@ -5,27 +5,27 @@ import { RiPlayFill } from '@remixicon/react'
 export default function Hero() {
   return (
     <section
-      className="relative bg-cover bg-center bg-no-repeat h-svh"
+      className="relative h-svh bg-cover bg-center bg-no-repeat"
       style={{ backgroundImage: "url('/imgs/movie-imgs/hero-bg-img.png')" }}
     >
-      <div className="container flex flex-col justify-center h-full items-center max-h-svh">
+      <div className="container flex h-full max-h-svh flex-col items-center justify-center">
         {/* Image  */}
-        <div className="aspect-square my-auto">
+        <div className="my-auto aspect-square">
           <Image
             src="/imgs/movie-imgs/play-logo.svg"
             alt="Hero Logo"
             width={200}
             height={200}
-            className="w-full h-auto object-cover"
+            className="h-auto w-full object-cover"
           />
         </div>
 
         {/* Content */}
-        <div className="text-center text-white pb-8 ">
+        <div className="pb-8 text-center text-white">
           <h1 className="text-3xl sm:text-4xl lg:text-5xl">
             Stream Everything You Love, Instantly
           </h1>
-          <p className="max-w-[1140px] mx-auto mt-2.5 mb-10">
+          <p className="mx-auto mt-2.5 mb-10 max-w-[1140px]">
             Unlimited movies. Endless shows. Zero waiting. StreamVibe puts
             thousands of titles at your fingertips—new releases, classics, and
             everything in between. Create custom watchlists, stream on any

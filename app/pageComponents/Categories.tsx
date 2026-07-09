@@ -21,7 +21,7 @@ export default function Categories() {
         />
         {/* Wrapper */}
         <div className="">
-          <Carousel className="w-full max-lg:overflow-x-hidden ">
+          <Carousel className="w-full max-lg:overflow-x-hidden">
             <CarouselContent className="-ml-1">
               {categoryItems.map((item) => (
                 <Slider key={item.id} {...item} />

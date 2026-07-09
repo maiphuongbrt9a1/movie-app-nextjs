@@ -13,13 +13,13 @@ export default function AccordionSec() {
       type="single"
       collapsible
       defaultValue={'What is StreamVibe?'}
-      className="w-full grid md:grid-cols-2 gap-5 md:space-x-10"
+      className="grid w-full gap-5 md:grid-cols-2 md:space-x-10"
     >
       {faqListItems.map((item) => (
         <AccordionItem key={item.id} value={item.title}>
           <AccordionTrigger>
             <div className="flex items-center gap-4">
-              <span className="size-12 shrink-0 bg-black-12 flex items-center justify-center ring ring-black-15 rounded-lg font-semibold">
+              <span className="bg-black-12 ring-black-15 flex size-12 shrink-0 items-center justify-center rounded-lg font-semibold ring">
                 {item.id}
               </span>
               <p className="">{item.title}</p>
