@@ -1,3 +1,6 @@
+'use client'
+import { motion } from 'motion/react'
+import * as variants from '@/motion/animation'
 import Title from './Title'
 import { pricingCardItem } from '@/data/data'
 import { Card, CardContent, CardFooter } from './ui/card'
@@ -6,14 +9,23 @@ import { Button } from './ui/button'
 export default function Pricing() {
   return (
     <section className="pt-24 md:pt-36">
-      <div className="container">
+      <motion.div
+        variants={variants.staggerContainer}
+        initial="hidden"
+        whileInView={'show'}
+        viewport={{ once: true }}
+        className="container"
+      >
         {/* title */}
         <Title
           title="Choose the plan that's right for you"
           text="Join StreamVibe and select from our flexible subscription options tailored to suit your viewing preferences. Get ready for non-stop entertainment!"
         ></Title>
         {/* Wrapper */}
-        <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:mt-14 lg:grid-cols-3">
+        <motion.div
+          variants={variants.fadeIn}
+          className="mt-10 grid gap-5 sm:grid-cols-2 lg:mt-14 lg:grid-cols-3"
+        >
           {pricingCardItem.map((item) => (
             <Card key={item.id} className="bg-black-10 flex flex-col">
               <CardContent key={item.id} className="">
@@ -32,8 +44,8 @@ export default function Pricing() {
               </CardFooter>
             </Card>
           ))}
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </section>
   )
 }

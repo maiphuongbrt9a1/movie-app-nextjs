@@ -1,3 +1,7 @@
+'use client'
+import { motion } from 'motion/react'
+import * as variants from '@/motion/animation'
+
 import Title from '@/components/Title'
 import { devicesItems } from '@/data/data'
 import { Card, CardContent, CardHeader } from '@/components/ui/card'
@@ -6,7 +10,13 @@ import Image from 'next/image'
 export default function Devices() {
   return (
     <section className="section">
-      <div className="container">
+      <motion.div
+        variants={variants.staggerContainer}
+        initial="hidden"
+        whileInView={'show'}
+        viewport={{ once: true }}
+        className="container"
+      >
         {/* Title */}
         <Title
           title="Your Entertainment, Every Screen"
@@ -16,7 +26,7 @@ export default function Devices() {
         <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:mt-16 lg:grid-cols-3">
           {devicesItems.map((item) => (
             // Card
-            <div className="" key={item.id}>
+            <motion.div variants={variants.fadeInUp} className="" key={item.id}>
               <Card className="bg-black-06 relative overflow-hidden rounded-lg">
                 <CardHeader className="flex items-center gap-2.5">
                   {/* icon */}
@@ -38,10 +48,10 @@ export default function Devices() {
                 {/* Gradient clr */}
                 <div className="bg-red-55 absolute -top-9 -right-9 size-24 rounded-full blur-[100px]"></div>
               </Card>
-            </div>
+            </motion.div>
           ))}
         </div>
-      </div>
+      </motion.div>
     </section>
   )
 }
