@@ -14,3 +14,10 @@ export interface cardTwoProps {
   view: string
   duration: string
 }
+
+export interface inputProps {
+  label: string
+  type: string
+  id: number
+  placeholder: string
+}

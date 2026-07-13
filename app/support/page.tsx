@@ -1,5 +1,10 @@
-import React from 'react'
-
+import ContactForm from './components/ContactForm'
+import FaqSec from '@/components/FaqSec'
 export default function Support() {
-  return <div>Support</div>
+  return (
+    <>
+      <ContactForm />
+      <FaqSec />
+    </>
+  )
 }
