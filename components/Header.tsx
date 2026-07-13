@@ -24,6 +24,7 @@ export default function Header() {
             alt="Logo"
             width={166}
             height={50}
+            loading="eager"
           />
         </Link>
         {/* Mobile menu */}
@@ -35,6 +36,7 @@ export default function Header() {
               return (
                 <li key={item.id}>
                   <Link
+                    onClick={handleClick}
                     href={item.href}
                     className={`hover:bg-black-12 block rounded-lg px-6 py-3 pr-10 text-white transition-colors ${pathname === item.href ? 'bg-black-10' : 'hover:bg-black-12 transition-colors'}`}
                   >

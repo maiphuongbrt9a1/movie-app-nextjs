@@ -37,6 +37,7 @@ export default function ContactForm() {
                   alt="Support"
                   width={449}
                   height={547}
+                  loading="eager"
                 ></Image>
               </CardContent>
             </Card>

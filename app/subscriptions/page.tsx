@@ -1,5 +1,11 @@
-import React from 'react'
+import Pricing from '@/components/Pricing'
+import Features from './components/Features'
 
 export default function Subscriptions() {
-  return <div>Subscriptions</div>
+  return (
+    <>
+      <Pricing />
+      <Features />
+    </>
+  )
 }
